@@ -1,0 +1,2 @@
+[workspace]
+members = ["libvlc-sys", "rvlc"]

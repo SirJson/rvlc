@@ -1,0 +1,79 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "attach",
+            "name": "Attach",
+            "program": "${workspaceFolder}/target/debug/examples/modfile"
+        },
+{
+    "type": "gdb",
+    "request": "launch",
+    "name": "Launch gdb for modfile",
+    "target": "${workspaceFolder}/target/debug/examples/modfile",
+    "cwd": "${workspaceRoot}",
+    "valuesFormatting": "parseText"
+},
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'libvlc-sys'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=libvlc-sys"
+                ],
+                "filter": {
+                    "name": "libvlc-sys",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'rvlc'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=rvlc"
+                ],
+                "filter": {
+                    "name": "rvlc",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "modfile",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--example=modfile"
+                ],
+                "filter": {
+                    "name": "modfile",
+                    "kind": "bin"
+                }
+            },
+            "console": "integratedTerminal",
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+    ]
+}

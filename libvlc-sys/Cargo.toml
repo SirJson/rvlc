@@ -1,0 +1,13 @@
+[package]
+name = "libvlc-sys"
+version = "0.1.0"
+authors = ["Raffael Zica <1042414+SirJson@users.noreply.github.com>"]
+edition = "2018"
+links = "libvlc"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+bindgen = "0.58"
+pkg-config = "0.3"
+cc = { version = "1.0", features = ["parallel"] }
